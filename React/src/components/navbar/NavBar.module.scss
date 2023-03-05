@@ -1,0 +1,16 @@
+.nav {
+    background-color: rgb(14, 75, 99);
+    padding: 20px 20px;
+  }
+  
+.nav_item {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    padding: 0px 10px;
+
+    &.active {
+        font-weight: 400;
+    }
+}

@@ -1,0 +1,36 @@
+.avatarWrapper {
+    margin: 0 auto;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+.avatar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.avatarTitle {
+    font-size: 25px;
+    font-family: 700;
+    padding: 20px 0px;
+}
+
+.btnWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.downloadBtn {
+  color: #fff;
+  border: none;
+  background-color: rgb(29, 158, 209);
+  padding: 5px 20px;
+  border-radius: 10px;
+}

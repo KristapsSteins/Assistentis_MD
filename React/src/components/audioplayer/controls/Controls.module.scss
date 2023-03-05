@@ -1,0 +1,62 @@
+.controlsWrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0px 40px
+  }
+
+  .controls {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+  }
+  
+  .controls button, .volume button {
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    opacity: 0.8;
+  }
+  
+  button svg {
+    font-size: 25px;
+  }
+
+  .volume {
+    display: flex;
+    align-items: center;
+  }
+
+  .volume button {
+    margin: 0;
+  }
+
+  .playBtn {
+    position: relative;
+  }
+  
+  .playBtn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ccc;
+    opacity: 0.6;
+    z-index: -1;
+    transition: opacity 0.2s;
+  }
+  
+  .playBtn:hover::before {
+    opacity: 1;
+  }
+
+  .speedBtn {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+  }
