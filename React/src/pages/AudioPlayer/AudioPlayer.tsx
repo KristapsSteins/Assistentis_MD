@@ -5,7 +5,7 @@ import "../../styles/CustomizeProgressBar/CustomizeProgressBar.scss";
 import style from "./AudioPlayer.module.scss";
 import { useState, useRef, useEffect } from "react";
 import DisplayAllTracks from "../../components/audioplayer/displayalltracks/DisplayAllTracks";
-import { fetchData, formatTime, handleKeyDown, handleNext } from "../../functions/Functions";
+import { fetchAllTracks, formatTime, handleKeyDown, handleNext } from "../../functions/functions";
 
 
 export type Tracks = {
@@ -23,7 +23,7 @@ function AudioPlayer() {
     const audioRef = useRef<HTMLAudioElement>(null);
 
     useEffect(() => {
-        fetchData().then(data => {
+        fetchAllTracks().then(data => {
             setAllTracks(data);
         }).catch(error => {
             console.error(error);

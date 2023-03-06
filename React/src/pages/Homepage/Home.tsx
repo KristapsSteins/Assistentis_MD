@@ -5,7 +5,7 @@ function Home() {
         <div className="container">
             <div className={style.homepage}>
                 <h1>Welcome to Assistentis Homework</h1>
-                <p>Made by Kristaps Šteins</p>
+                <span className={style.madeInfo}>Made by Kristaps Šteins</span>
             </div>
         </div>
     );

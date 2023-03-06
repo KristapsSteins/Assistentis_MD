@@ -1,7 +1,7 @@
 import style from "./DisplayAllTracks.module.scss";
 import { Tracks } from "../../../pages/AudioPlayer/AudioPlayer";
 import { BsMusicNoteList } from "react-icons/bs";
-import { formatDuration } from "../../../functions/Functions";
+import { formatDuration } from "../../../functions/functions";
 
 type DisplayAllProps = {
     allTracks: Tracks[],

@@ -1,7 +1,7 @@
 import { BsMusicNoteBeamed } from "react-icons/bs";
 import style from "./DisplayTrack.module.scss";
 import { Tracks } from "../../../pages/AudioPlayer/AudioPlayer";
-import { onLoadedMetadata } from "../../../functions/Functions";
+import { onLoadedMetadata } from "../../../functions/functions";
 
 type DisplayTrackProps = {
   audioRef: React.RefObject<HTMLAudioElement>;

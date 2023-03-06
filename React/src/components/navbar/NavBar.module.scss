@@ -3,14 +3,18 @@
     padding: 20px 20px;
   }
   
-.nav_item {
+.navItem {
     text-decoration: none;
     font-weight: 400;
     font-size: 25px;
     color: rgb(255, 255, 255);
     padding: 0px 10px;
+}
 
-    &.active {
-        font-weight: 400;
-    }
+.navItemActive {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    padding: 0px 10px;
 }

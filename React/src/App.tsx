@@ -1,4 +1,3 @@
-import "./App.css";
 import NavBar from "./components/navbar/NavBar";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Homepage/Home";
@@ -14,7 +13,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/avatar" element={<Avatar />} />
-                <Route path="/video_player" element={<AudioPlayer />} />
+                <Route path="/video-player" element={<AudioPlayer />} />
             </Routes>
         </>
     );

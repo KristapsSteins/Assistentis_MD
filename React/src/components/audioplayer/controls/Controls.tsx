@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import style from "./Controls.module.scss";
 import { Tracks } from "../../../pages/AudioPlayer/AudioPlayer";
-import { skipForward, skipBackward, handlePrevious } from "../../../functions/Functions";
+import { skipForward, skipBackward, handlePrevious } from "../../../functions/functions";
 
 import {
     IoPlayBackSharp,
@@ -138,6 +138,9 @@ const Controls = ({
                         onChange={(e) => setVolume(parseInt(e.target.value))}
                         style={{
                             background: `linear-gradient(to right, #fff ${volume}%, #ccc ${volume}%)`,
+                            position: "absolute",
+                            left: 35,
+                            minWidth: 80,
                         }}
                     />
                 )}
@@ -151,7 +154,7 @@ const Controls = ({
                 </button>
                 <div className={style.playBtn}>
                     <button onClick={togglePlayPause} className={style.playBtn}>
-                        {isPlaying ? <IoPauseSharp /> : <IoPlaySharp />}
+                        {isPlaying ? <IoPauseSharp /> : <IoPlaySharp className={style.pauseBtn} />}
                     </button>
                 </div>
                 <button onClick={skipForwardHandler}>

@@ -32,7 +32,6 @@ fs.readdir(tracksDirJSON, async function (err, files) {
       ) {
         const filePath = path.join(__dirname, tracksDir, file);
         const duration = await getAudioDurationInSeconds(filePath);
-        console.log(duration);
         tracks.push({
           title: file.replace(/\.(mp3|wav|aac)$/, ""),
           src: `http://localhost:3004/tracks/${file}`,
