@@ -1,7 +1,7 @@
-import { BsMusicNoteBeamed } from "react-icons/bs";
-import style from "./DisplayTrack.module.scss";
+import { onLoadedMetadata } from "../../../utilis/functions";
 import { Tracks } from "../../../pages/AudioPlayer/AudioPlayer";
-import { onLoadedMetadata } from "../../../functions/functions";
+
+import style from "./DisplayTrack.module.scss";
 
 type DisplayTrackProps = {
   audioRef: React.RefObject<HTMLAudioElement>;
@@ -30,15 +30,7 @@ const DisplayTrack = ({
                 onEnded={handleNextClick}
             />
             <div className={style.audioInfo}>
-                {allTracks ? (
-                    <h4>{allTracks[trackIndex]?.title}</h4>
-                ) : (
-                    <div>
-                        <span>
-                            <BsMusicNoteBeamed />
-                        </span>
-                    </div>
-                )}
+                <h4>{allTracks[trackIndex]?.title}</h4>
             </div>
         </div>
     );

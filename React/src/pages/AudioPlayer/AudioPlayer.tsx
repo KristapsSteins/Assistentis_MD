@@ -1,11 +1,13 @@
+import "../../styles/CustomizeProgressBar/CustomizeProgressBar.scss";
+
+import { fetchAllTracks, formatTime, handleKeyDown, handleNext } from "../../utilis/functions";
+import { useState, useRef, useEffect } from "react";
+
 import Controls from "../../components/audioplayer/controls/Controls";
 import DisplayTrack from "../../components/audioplayer/displaytrack/DisplayTrack";
 import ProgressBar from "../../components/audioplayer/progressbar/ProgressBar";
-import "../../styles/CustomizeProgressBar/CustomizeProgressBar.scss";
 import style from "./AudioPlayer.module.scss";
-import { useState, useRef, useEffect } from "react";
 import DisplayAllTracks from "../../components/audioplayer/displayalltracks/DisplayAllTracks";
-import { fetchAllTracks, formatTime, handleKeyDown, handleNext } from "../../functions/functions";
 
 
 export type Tracks = {
@@ -14,7 +16,7 @@ export type Tracks = {
     duration: number;
   };
 
-function AudioPlayer() {
+const AudioPlayer = () => {
     const [timeProgress, setTimeProgress] = useState(0);
     const [duration, setDuration] = useState(0);
     const [trackIndex, setTrackIndex] = useState(0);
@@ -37,6 +39,10 @@ function AudioPlayer() {
             document.removeEventListener("keydown", handleKeyDownEvent);
         };
     }, [audioRef]);
+
+    if (!allTracks) {
+        return <h1>Loading...</h1>;
+    }
 
 
     const progressBarRef = useRef<HTMLInputElement>(null);
@@ -85,6 +91,6 @@ function AudioPlayer() {
             </div>
         </div>
     );
-}
+};
 
 export default AudioPlayer;

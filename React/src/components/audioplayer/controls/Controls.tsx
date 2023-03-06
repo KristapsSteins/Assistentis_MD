@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
-import style from "./Controls.module.scss";
 import { Tracks } from "../../../pages/AudioPlayer/AudioPlayer";
-import { skipForward, skipBackward, handlePrevious } from "../../../functions/functions";
+import { skipForward, skipBackward, handlePrevious } from "../../../utilis/functions";
+import style from "./Controls.module.scss";
 
 import {
     IoPlayBackSharp,

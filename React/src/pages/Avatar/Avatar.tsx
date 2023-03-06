@@ -1,10 +1,11 @@
+import { useRef } from "react";
+
 import style from "./Avatar.module.scss";
 import html2canvas from "html2canvas";
-import { useRef } from "react";
 import saveAs from "file-saver";
 import AvatarProfile from "../../components/avatarprofile/AvatarProfile";
 
-function Avatar() {
+const Avatar = () => {
     const canvasRef = useRef<HTMLDivElement>(null);
 
     const handleDownload = () => {
@@ -28,11 +29,11 @@ function Avatar() {
                     onClick={handleDownload} 
                     className={style.downloadBtn}
                 >
-                            Download
+                    Download
                 </button>
             </div>
         </>
     );
-}
+};
 
 export default Avatar;

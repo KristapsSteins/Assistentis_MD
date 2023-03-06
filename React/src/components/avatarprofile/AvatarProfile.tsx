@@ -2,7 +2,7 @@ import { useRef } from "react";
 import avatar from "../../assets/man.png";
 import style from "./AvatarProfile.module.scss";
 
-function AvatarImage() {
+const AvatarImage = () => {
     const selectedPathRef = useRef(null);
 
     const handlePathClick = (event: React.MouseEvent<SVGPathElement>) => {
@@ -85,6 +85,6 @@ function AvatarImage() {
             </svg>
         </>
     );
-}
+};
 
 export default AvatarImage;

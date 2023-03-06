@@ -8,13 +8,13 @@ type ProgressBarProps = {
   formatTime: (time: number) => string;
 }
 
-function ProgressBar({ 
+const ProgressBar = ({ 
     progressBarRef, 
     audioRef, 
     timeProgress, 
     duration,
     formatTime 
-}: ProgressBarProps) {
+}: ProgressBarProps) => {
     const handleProgressChange = () => {
         if (audioRef.current) {
             audioRef.current.currentTime = parseInt(progressBarRef.current?.value || "0");
@@ -33,6 +33,6 @@ function ProgressBar({
             <span className="time">{formatTime(duration)}</span>
         </div>
     );
-}
+};
 
 export default ProgressBar;

@@ -1,5 +1,6 @@
-import axios from "axios";
 import { Tracks } from "../pages/AudioPlayer/AudioPlayer";
+
+import axios from "axios";
 
 export async function fetchAllTracks() {
     const response = await axios.get("http://localhost:3004/tracks");
