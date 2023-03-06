@@ -12,6 +12,6 @@ When all packages have been installed run: ```npm run dev```
 
 #### For server launch,
 
-Open Server folder and in terminal run `npm install`
+Open Server folder and in terminal run `npm i`
 
 When all packages have been installed run: `npm run start:nodemon`
